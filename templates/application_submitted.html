@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Submitted</title>
+    {% include "bootstrap.html" %}
+  </head>
+  <body>
+    {% include "nav.html" %} {% include "banner.html" %}
+
+    <div class="container">
+      <h1 class="text-center mt-3 mb-4">Jovian Careers</h1>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Your application for the role of <strong>{{job['title']}}</strong> at
+        Jovian has been submitted.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <strong>Full Name</strong>
+      <div class="mb-2">{{application['full_name']}}</div>
+
+      <strong>Email</strong>
+      <div class="mb-2">{{application['email']}}</div>
+
+      <strong>linkedinURL</strong>
+      <div class="mb-2">{{application['linkedin_url']}}</div>
+
+      <strong>Education</strong>
+      <div class="mb-2">{{application['education']}}</div>
+
+      <strong>Work Experience</strong>
+      <div class="mb-2">{{application['work_experience']}}</div>
+
+      <strong>Resume URL</strong>
+      <div class="mb-2">{{application['resume_url']}}</div>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>

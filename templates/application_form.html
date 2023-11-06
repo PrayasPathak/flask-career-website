@@ -1,0 +1,67 @@
+<main class="w-50 m-auto container">
+  <h4 class="text-center">Application Form</h4>
+
+  <form method="POST" action="/job/{{job.id}}/apply">
+    <div class="mb-2">
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="John Smith"
+        name="full_name"
+        id="fullName"
+      />
+    </div>
+    <div class="mb-2">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="johnsmith@email.com"
+        name="email"
+        id="email"
+      />
+    </div>
+    <div class="mb-2">
+      <label for="linkedinURL">LinkedIn URL</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="https://linkedin.com/in/johnsmith"
+        name="linkedin_url"
+      />
+    </div>
+
+    <div class="mb-2">
+      <label for="education">Education</label>
+      <textarea
+        class="form-control"
+        id="education"
+        rows="3"
+        name="education"
+      ></textarea>
+    </div>
+
+    <div class="mb-2">
+      <label for="workExperience">Work Experience</label>
+      <textarea
+        class="form-control"
+        id="workExperience"
+        rows="3"
+        name="work_experience"
+      ></textarea>
+    </div>
+
+    <div class="mb-2">
+      <label for="resumeURL">Resume URL</label>
+      <input
+        type="text"
+        class="form-control"
+        name="resume_url"
+        id="resumeURL"
+      />
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Submit</button>
+  </form>
+</main>
